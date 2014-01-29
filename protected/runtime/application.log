@@ -1,0 +1,511 @@
+2014/01/27 20:56:38 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_accounts' (
+	"student_num" int(9) NOT NULL pk,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB
+2014/01/27 20:56:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "pk": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
+	"student_num" int(9) NOT NULL pk,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB.
+2014/01/27 20:56:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "pk": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
+	"student_num" int(9) NOT NULL pk,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
+#2 C:\wamp\www\spko\protected\migrations\m140127_173349_create_account_table.php(35): CDbMigration->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
+#3 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(385): m140127_173349_create_account_table->up()
+#4 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140127_173349_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\wamp\www\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\wamp\www\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\wamp\www\spko\protected\yiic.php(7): require_once('C:\wamp\www\yii...')
+#12 {main}
+---
+2014/01/27 20:57:28 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_accounts' (
+	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB
+2014/01/27 20:57:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
+	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB.
+2014/01/27 20:57:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
+	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
+#2 C:\wamp\www\spko\protected\migrations\m140127_173349_create_account_table.php(35): CDbMigration->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
+#3 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(385): m140127_173349_create_account_table->up()
+#4 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140127_173349_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\wamp\www\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\wamp\www\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\wamp\www\spko\protected\yiic.php(7): require_once('C:\wamp\www\yii...')
+#12 {main}
+---
+2014/01/27 20:58:21 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_accounts' (
+	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB
+2014/01/27 20:58:22 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
+	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB.
+2014/01/27 20:58:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
+	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
+#2 C:\wamp\www\spko\protected\migrations\m140127_173349_create_account_table.php(35): CDbMigration->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
+#3 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(385): m140127_173349_create_account_table->up()
+#4 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140127_173349_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\wamp\www\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\wamp\www\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\wamp\www\spko\protected\yiic.php(7): require_once('C:\wamp\www\yii...')
+#12 {main}
+---
+2014/01/27 21:03:29 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_accounts' (
+	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values_used" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB
+2014/01/27 21:03:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
+	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values_used" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB.
+2014/01/27 21:03:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
+	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values_used" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
+#2 C:\wamp\www\spko\protected\migrations\m140127_173349_create_account_table.php(35): CDbMigration->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
+#3 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(385): m140127_173349_create_account_table->up()
+#4 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140127_173349_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\wamp\www\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\wamp\www\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\wamp\www\spko\protected\yiic.php(7): require_once('C:\wamp\www\yii...')
+#12 {main}
+---
+2014/01/27 21:07:05 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_accounts' (
+	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values_used" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB
+2014/01/27 21:07:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
+	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values_used" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB.
+2014/01/27 21:07:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
+	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"last_name" varchar(255) NOT NULL,
+	"first_name" varchar(255) NOT NULL,
+	"middle_name" varchar(255) NOT NULL,
+	"civil_status" varchar(255) NOT NULL,
+	"gender" varchar(255) NOT NULL,
+	"birth_date" int(8) NOT NULL,
+	"perm_add" varchar(255) NOT NULL,
+	"email_add" varchar(255) NOT NULL,
+	"contact_num" int(20),
+	"grad_year" int(4),
+	"course" varchar(255) NOT NULL,
+	"major" varchar(255),
+	"employed_or_not" varchar(255),
+	"emp_status" varchar(255),
+	"occupation" varchar(255),
+	"workplace_name" varchar(255),
+	"workplace_addr" varchar(255),
+	"job_rel_course" varchar(255),
+	"reasons_not_emp" varchar(255),
+	"not_rel_course" varchar(255),
+	"was_curr_rel_to_course" varchar(255),
+	"competencies" varchar(255),
+	"suggestions" varchar(255),
+	"useful_things_or_practices" varchar(255),
+	"values_used" varchar(255),
+	"how_then" varchar(255)
+) ENGINE=InnoDB' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
+#2 C:\wamp\www\spko\protected\migrations\m140127_173349_create_account_table.php(35): CDbMigration->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
+#3 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(385): m140127_173349_create_account_table->up()
+#4 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140127_173349_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\wamp\www\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\wamp\www\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\wamp\www\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\wamp\www\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\wamp\www\spko\protected\yiic.php(7): require_once('C:\wamp\www\yii...')
+#12 {main}
+---
+2014/01/27 21:14:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'spko.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
