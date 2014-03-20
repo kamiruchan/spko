@@ -1,511 +1,874 @@
-2014/01/27 20:56:38 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_accounts' (
-	"student_num" int(9) NOT NULL pk,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB
-2014/01/27 20:56:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "pk": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
-	"student_num" int(9) NOT NULL pk,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB.
-2014/01/27 20:56:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "pk": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
-	"student_num" int(9) NOT NULL pk,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+2014/02/11 16:28:32 [error] [php] include(Accounts.php): failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:427)
 Stack trace:
-#0 C:\wamp\www\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
-#1 C:\wamp\www\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
-#2 C:\wamp\www\spko\protected\migrations\m140127_173349_create_account_table.php(35): CDbMigration->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
-#3 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(385): m140127_173349_create_account_table->up()
-#4 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140127_173349_...')
-#5 [internal function]: MigrateCommand->actionUp(Array)
-#6 C:\wamp\www\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
-#7 C:\wamp\www\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
-#8 C:\wamp\www\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
-#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
-#10 C:\wamp\www\yii\framework\yiic.php(33): CApplication->run()
-#11 C:\wamp\www\spko\protected\yiic.php(7): require_once('C:\wamp\www\yii...')
-#12 {main}
----
-2014/01/27 20:57:28 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_accounts' (
-	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB
-2014/01/27 20:57:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
-	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB.
-2014/01/27 20:57:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
-	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\wamp\www\spko\protected\controllers\AccountsController.php(125): CActiveDataProvider->__construct()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): AccountsController->actionIndex()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): AccountsController->runAction()
+#7 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): AccountsController->filterAccessControl()
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): AccountsController->runActionWithFilters()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): AccountsController->run()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\spko\index.php(13): CWebApplication->run()
+REQUEST_URI=/spko/index.php?r=accounts/index
+in C:\wamp\www\spko\protected\controllers\AccountsController.php (125)
+in C:\wamp\www\spko\index.php (13)
+2014/02/13 12:22:29 [error] [php] include(Accounts.php): failed to open stream: No such file or directory (C:\wamp\www\spko\framework\YiiBase.php:427)
 Stack trace:
-#0 C:\wamp\www\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
-#1 C:\wamp\www\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
-#2 C:\wamp\www\spko\protected\migrations\m140127_173349_create_account_table.php(35): CDbMigration->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
-#3 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(385): m140127_173349_create_account_table->up()
-#4 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140127_173349_...')
-#5 [internal function]: MigrateCommand->actionUp(Array)
-#6 C:\wamp\www\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
-#7 C:\wamp\www\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
-#8 C:\wamp\www\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
-#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
-#10 C:\wamp\www\yii\framework\yiic.php(33): CApplication->run()
-#11 C:\wamp\www\spko\protected\yiic.php(7): require_once('C:\wamp\www\yii...')
-#12 {main}
----
-2014/01/27 20:58:21 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_accounts' (
-	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB
-2014/01/27 20:58:22 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
-	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB.
-2014/01/27 20:58:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
-	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+#0 C:\wamp\www\spko\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\wamp\www\spko\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\wamp\www\spko\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\wamp\www\spko\protected\controllers\AccountsController.php(125): CActiveDataProvider->__construct()
+#4 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(49): AccountsController->actionIndex()
+#5 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): AccountsController->runAction()
+#7 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\spko\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): AccountsController->filterAccessControl()
+#10 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\spko\framework\web\CController.php(265): AccountsController->runActionWithFilters()
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(282): AccountsController->run()
+#14 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\spko\index.php(13): CWebApplication->run()
+REQUEST_URI=/spko/index.php?r=accounts
+in C:\wamp\www\spko\protected\controllers\AccountsController.php (125)
+in C:\wamp\www\spko\index.php (13)
+2014/02/18 09:50:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'spko.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2014/03/16 05:52:07 [error] [exception.CException] exception 'CException' with message 'CollegeController cannot find the requested view "create".' in C:\wamp\www\spko\framework\web\CController.php:878
 Stack trace:
-#0 C:\wamp\www\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
-#1 C:\wamp\www\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
-#2 C:\wamp\www\spko\protected\migrations\m140127_173349_create_account_table.php(35): CDbMigration->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
-#3 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(385): m140127_173349_create_account_table->up()
-#4 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140127_173349_...')
-#5 [internal function]: MigrateCommand->actionUp(Array)
-#6 C:\wamp\www\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
-#7 C:\wamp\www\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
-#8 C:\wamp\www\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
-#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
-#10 C:\wamp\www\yii\framework\yiic.php(33): CApplication->run()
-#11 C:\wamp\www\spko\protected\yiic.php(7): require_once('C:\wamp\www\yii...')
-#12 {main}
+#0 C:\wamp\www\spko\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#1 C:\wamp\www\spko\protected\controllers\CollegeController.php(79): CController->render('create', Array)
+#2 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(49): CollegeController->actionCreate()
+#3 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('college/create')
+#13 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\spko\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/spko/college/create
+HTTP_REFERER=http://127.0.0.1/spko/college/admin
 ---
-2014/01/27 21:03:29 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_accounts' (
-	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values_used" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB
-2014/01/27 21:03:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
-	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values_used" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB.
-2014/01/27 21:03:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
-	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values_used" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+2014/03/16 06:01:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in C:\wamp\www\spko\framework\web\CController.php:483
 Stack trace:
-#0 C:\wamp\www\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
-#1 C:\wamp\www\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
-#2 C:\wamp\www\spko\protected\migrations\m140127_173349_create_account_table.php(35): CDbMigration->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
-#3 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(385): m140127_173349_create_account_table->up()
-#4 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140127_173349_...')
-#5 [internal function]: MigrateCommand->actionUp(Array)
-#6 C:\wamp\www\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
-#7 C:\wamp\www\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
-#8 C:\wamp\www\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
-#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
-#10 C:\wamp\www\yii\framework\yiic.php(33): CApplication->run()
-#11 C:\wamp\www\spko\protected\yiic.php(7): require_once('C:\wamp\www\yii...')
-#12 {main}
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('create')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('create')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('college/create')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/college/create
+HTTP_REFERER=http://127.0.0.1/spko/college/admin
 ---
-2014/01/27 21:07:05 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_accounts' (
-	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values_used" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB
-2014/01/27 21:07:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
-	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values_used" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB.
-2014/01/27 21:07:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENGINE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_accounts' (
-	"student_num" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"middle_name" varchar(255) NOT NULL,
-	"civil_status" varchar(255) NOT NULL,
-	"gender" varchar(255) NOT NULL,
-	"birth_date" int(8) NOT NULL,
-	"perm_add" varchar(255) NOT NULL,
-	"email_add" varchar(255) NOT NULL,
-	"contact_num" int(20),
-	"grad_year" int(4),
-	"course" varchar(255) NOT NULL,
-	"major" varchar(255),
-	"employed_or_not" varchar(255),
-	"emp_status" varchar(255),
-	"occupation" varchar(255),
-	"workplace_name" varchar(255),
-	"workplace_addr" varchar(255),
-	"job_rel_course" varchar(255),
-	"reasons_not_emp" varchar(255),
-	"not_rel_course" varchar(255),
-	"was_curr_rel_to_course" varchar(255),
-	"competencies" varchar(255),
-	"suggestions" varchar(255),
-	"useful_things_or_practices" varchar(255),
-	"values_used" varchar(255),
-	"how_then" varchar(255)
-) ENGINE=InnoDB' in C:\wamp\www\yii\framework\db\CDbCommand.php:358
+2014/03/16 06:04:31 [error] [exception.CException] exception 'CException' with message 'CourseController cannot find the requested view "create".' in C:\wamp\www\spko\framework\web\CController.php:878
 Stack trace:
-#0 C:\wamp\www\yii\framework\db\CDbCommand.php(1324): CDbCommand->execute()
-#1 C:\wamp\www\yii\framework\db\CDbMigration.php(233): CDbCommand->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
-#2 C:\wamp\www\spko\protected\migrations\m140127_173349_create_account_table.php(35): CDbMigration->createTable('tbl_accounts', Array, 'ENGINE=InnoDB')
-#3 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(385): m140127_173349_create_account_table->up()
-#4 C:\wamp\www\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140127_173349_...')
-#5 [internal function]: MigrateCommand->actionUp(Array)
-#6 C:\wamp\www\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
-#7 C:\wamp\www\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
-#8 C:\wamp\www\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
-#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
-#10 C:\wamp\www\yii\framework\yiic.php(33): CApplication->run()
-#11 C:\wamp\www\spko\protected\yiic.php(7): require_once('C:\wamp\www\yii...')
-#12 {main}
+#0 C:\wamp\www\spko\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#1 C:\wamp\www\spko\protected\controllers\CourseController.php(79): CController->render('create', Array)
+#2 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(49): CourseController->actionCreate()
+#3 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('course/create')
+#13 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\spko\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/spko/course/create
+HTTP_REFERER=http://127.0.0.1/spko/course
 ---
-2014/01/27 21:14:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'spko.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2014/03/16 06:06:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('create')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('create')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('course/create')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/course/create
+HTTP_REFERER=http://127.0.0.1/spko/course
+---
+2014/03/17 07:34:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('create')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('create')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('course/create')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/course/create
+HTTP_REFERER=http://127.0.0.1/spko/course
+---
+2014/03/18 01:24:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`spko`.`tbl_email`, CONSTRAINT `fk_tbl_email_tbl_user1` FOREIGN KEY (`username`) REFERENCES `tbl_user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `tbl_email` (`emailAdd`, `username`) VALUES (:yp0, :yp1).
+in C:\wamp\www\spko\protected\controllers\EmailController.php (73)
+in C:\wamp\www\spko\index.php (13)
+2014/03/18 01:24:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`spko`.`tbl_email`, CONSTRAINT `fk_tbl_email_tbl_user1` FOREIGN KEY (`username`) REFERENCES `tbl_user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `tbl_email` (`emailAdd`, `username`) VALUES (:yp0, :yp1)' in C:\wamp\www\spko\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\spko\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\wamp\www\spko\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\spko\protected\controllers\EmailController.php(73): CActiveRecord->save()
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(49): EmailController->actionCreate()
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('email/create')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/email/create
+HTTP_REFERER=http://127.0.0.1/spko/email/create
+---
+2014/03/18 01:36:24 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`spko`.`tbl_emp_info`, CONSTRAINT `fk_tbl_emp_info_tbl_account1` FOREIGN KEY (`tbl_account_studNum`) REFERENCES `tbl_account` (`studNum`) ON DELETE CASCADE ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_emp_info` (`empOrNot`, `occupation`, `workplaceName`, `workplaceAdd`, `currJobRelToCourse`, `unemploymentReason`, `tbl_account_studNum`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6).
+in C:\wamp\www\spko\protected\controllers\EmpInfoController.php (73)
+in C:\wamp\www\spko\index.php (13)
+2014/03/18 01:36:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`spko`.`tbl_emp_info`, CONSTRAINT `fk_tbl_emp_info_tbl_account1` FOREIGN KEY (`tbl_account_studNum`) REFERENCES `tbl_account` (`studNum`) ON DELETE CASCADE ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `tbl_emp_info` (`empOrNot`, `occupation`, `workplaceName`, `workplaceAdd`, `currJobRelToCourse`, `unemploymentReason`, `tbl_account_studNum`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)' in C:\wamp\www\spko\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\spko\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\wamp\www\spko\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\spko\protected\controllers\EmpInfoController.php(73): CActiveRecord->save()
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(49): EmpInfoController->actionCreate()
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('empinfo/create')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/empinfo/create
+HTTP_REFERER=http://127.0.0.1/spko/empinfo/create
+---
+2014/03/18 02:18:38 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`spko`.`tbl_user`, CONSTRAINT `fk_tbl_user_tbl_roles1` FOREIGN KEY (`role`) REFERENCES `tbl_roles` (`rolesID`)). The SQL statement executed was: INSERT INTO `tbl_user` (`username`, `password`, `role`) VALUES (:yp0, :yp1, :yp2).
+in C:\wamp\www\spko\protected\controllers\UserController.php (73)
+in C:\wamp\www\spko\index.php (13)
+2014/03/18 02:18:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`spko`.`tbl_user`, CONSTRAINT `fk_tbl_user_tbl_roles1` FOREIGN KEY (`role`) REFERENCES `tbl_roles` (`rolesID`)). The SQL statement executed was: INSERT INTO `tbl_user` (`username`, `password`, `role`) VALUES (:yp0, :yp1, :yp2)' in C:\wamp\www\spko\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\spko\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\wamp\www\spko\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\spko\protected\controllers\UserController.php(73): CActiveRecord->save()
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/user/create
+HTTP_REFERER=http://127.0.0.1/spko/user/create
+---
+2014/03/18 02:19:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kamiru".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('kamiru')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('kamiru')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/kamiru')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/user/kamiru
+HTTP_REFERER=http://127.0.0.1/spko/user/create
+---
+2014/03/18 02:26:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kamiru".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('kamiru')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('kamiru')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/kamiru')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/user/kamiru
+HTTP_REFERER=http://127.0.0.1/spko/user/create
+---
+2014/03/18 02:26:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "http://google.com".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/user/
+---
+2014/03/18 02:26:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/user/
+---
+2014/03/18 02:27:46 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\spko\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('')
+#9 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#10 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\spko\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/spko/user/
+---
+2014/03/18 02:36:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kamiru".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('kamiru')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('kamiru')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/kamiru')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/user/kamiru
+HTTP_REFERER=http://127.0.0.1/spko/user/create
+---
+2014/03/18 02:36:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kamiru".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('kamiru')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('kamiru')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/kamiru')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/user/kamiru
+---
+2014/03/18 02:37:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kamiru".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('kamiru')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('kamiru')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/kamiru')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/user/kamiru
+HTTP_REFERER=http://127.0.0.1/spko/user/
+---
+2014/03/18 03:15:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kamiru".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('kamiru')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('kamiru')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/kamiru')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/user/kamiru
+HTTP_REFERER=http://127.0.0.1/spko/user/index
+---
+2014/03/18 06:41:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kamiru".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('kamiru')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('kamiru')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/kamiru')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/user/kamiru
+HTTP_REFERER=http://127.0.0.1/spko/user
+---
+2014/03/18 14:30:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "kamiru".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('kamiru')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('kamiru')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/kamiru')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/user/kamiru
+HTTP_REFERER=http://127.0.0.1/spko/user
+---
+2014/03/19 01:11:10 [error] [exception.CException] exception 'CException' with message 'CWebUser.allowAutoLogin must be set true in order to use cookie-based authentication.' in C:\wamp\www\spko\framework\web\auth\CWebUser.php:240
+Stack trace:
+#0 C:\wamp\www\spko\protected\models\LoginForm.php(71): CWebUser->login(Object(UserIdentity), 2592000)
+#1 C:\wamp\www\spko\protected\controllers\SiteController.php(94): LoginForm->login()
+#2 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\spko\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\spko\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/spko/site/login
+HTTP_REFERER=http://127.0.0.1/spko/site/login
+---
+2014/03/19 01:12:53 [error] [exception.CException] exception 'CException' with message 'CWebUser.allowAutoLogin must be set true in order to use cookie-based authentication.' in C:\wamp\www\spko\framework\web\auth\CWebUser.php:240
+Stack trace:
+#0 C:\wamp\www\spko\protected\models\LoginForm.php(71): CWebUser->login(Object(UserIdentity), 2592000)
+#1 C:\wamp\www\spko\protected\controllers\SiteController.php(94): LoginForm->login()
+#2 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\spko\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\spko\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/spko/site/login
+HTTP_REFERER=http://127.0.0.1/spko/site/login
+---
+2014/03/19 02:33:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "akosijuan".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('akosijuan')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('akosijuan')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/akosijuan')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/user/akosijuan
+HTTP_REFERER=http://127.0.0.1/spko/user/create
+---
+2014/03/19 03:11:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\spko\protected\controllers\UserController.php:160
+Stack trace:
+#0 C:\wamp\www\spko\protected\controllers\UserController.php(56): UserController->loadModel('index')
+#1 [internal function]: UserController->actionView('index')
+#2 C:\wamp\www\spko\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/user/index
+HTTP_REFERER=http://127.0.0.1/spko/user/admin
+---
+2014/03/19 03:12:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\spko\protected\controllers\UserController.php:160
+Stack trace:
+#0 C:\wamp\www\spko\protected\controllers\UserController.php(56): UserController->loadModel('index')
+#1 [internal function]: UserController->actionView('index')
+#2 C:\wamp\www\spko\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/user/index
+HTTP_REFERER=http://127.0.0.1/spko/user/kamiru
+---
+2014/03/19 03:13:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\spko\protected\controllers\UserController.php:160
+Stack trace:
+#0 C:\wamp\www\spko\protected\controllers\UserController.php(56): UserController->loadModel('index')
+#1 [internal function]: UserController->actionView('index')
+#2 C:\wamp\www\spko\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/user/index
+HTTP_REFERER=http://127.0.0.1/spko/user/akosijuan
+---
+2014/03/19 03:13:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\spko\protected\controllers\UserController.php:160
+Stack trace:
+#0 C:\wamp\www\spko\protected\controllers\UserController.php(56): UserController->loadModel('index')
+#1 [internal function]: UserController->actionView('index')
+#2 C:\wamp\www\spko\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/user/index
+HTTP_REFERER=http://127.0.0.1/spko/user/akosijuan
+---
+2014/03/19 03:14:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\spko\protected\controllers\UserController.php:160
+Stack trace:
+#0 C:\wamp\www\spko\protected\controllers\UserController.php(56): UserController->loadModel('index')
+#1 [internal function]: UserController->actionView('index')
+#2 C:\wamp\www\spko\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/user/index
+HTTP_REFERER=http://127.0.0.1/spko/user/akosijuan
+---
+2014/03/19 03:14:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\spko\protected\controllers\UserController.php:160
+Stack trace:
+#0 C:\wamp\www\spko\protected\controllers\UserController.php(56): UserController->loadModel('create')
+#1 [internal function]: UserController->actionView('create')
+#2 C:\wamp\www\spko\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/user/create
+HTTP_REFERER=http://127.0.0.1/spko/user/akosijuan
+---
+2014/03/19 03:14:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\spko\protected\controllers\UserController.php:160
+Stack trace:
+#0 C:\wamp\www\spko\protected\controllers\UserController.php(56): UserController->loadModel('create')
+#1 [internal function]: UserController->actionView('create')
+#2 C:\wamp\www\spko\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/user/create
+HTTP_REFERER=http://127.0.0.1/spko/user/akosijuan
+---
+2014/03/19 03:14:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\spko\protected\controllers\UserController.php:160
+Stack trace:
+#0 C:\wamp\www\spko\protected\controllers\UserController.php(56): UserController->loadModel('create')
+#1 [internal function]: UserController->actionView('create')
+#2 C:\wamp\www\spko\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/user/create
+---
+2014/03/19 03:26:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\spko\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#10 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\spko\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/spko/user/create
+HTTP_REFERER=http://127.0.0.1/spko/user/
+---
+2014/03/19 03:26:34 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\spko\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#10 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\spko\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/spko/user/admin
+HTTP_REFERER=http://127.0.0.1/spko/user/
+---
+2014/03/19 03:26:39 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\spko\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#10 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\spko\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/spko/user/akosijuan
+HTTP_REFERER=http://127.0.0.1/spko/user/
+---
+2014/03/19 03:26:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\spko\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#10 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\spko\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/spko/user/create
+HTTP_REFERER=http://127.0.0.1/spko/user/
+---
+2014/03/19 03:27:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\spko\protected\controllers\UserController.php:160
+Stack trace:
+#0 C:\wamp\www\spko\protected\controllers\UserController.php(56): UserController->loadModel('create')
+#1 [internal function]: UserController->actionView('create')
+#2 C:\wamp\www\spko\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/user/create
+HTTP_REFERER=http://127.0.0.1/spko/user/
+---
+2014/03/19 03:28:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\spko\protected\controllers\UserController.php:160
+Stack trace:
+#0 C:\wamp\www\spko\protected\controllers\UserController.php(56): UserController->loadModel('create')
+#1 [internal function]: UserController->actionView('create')
+#2 C:\wamp\www\spko\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('user/view')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/user/create
+HTTP_REFERER=http://127.0.0.1/spko/user/kamiru
+---
+2014/03/19 03:29:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/index
+HTTP_REFERER=http://127.0.0.1/spko/user/create
+---
+2014/03/19 03:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/index
+HTTP_REFERER=http://127.0.0.1/spko/site/index
+---
+2014/03/19 03:29:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/page?view=about
+HTTP_REFERER=http://127.0.0.1/spko/site/index
+---
+2014/03/19 03:29:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/contact
+HTTP_REFERER=http://127.0.0.1/spko/site/page?view=about
+---
+2014/03/19 03:29:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/logout
+HTTP_REFERER=http://127.0.0.1/spko/site/contact
+---
+2014/03/19 03:30:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/logout
+HTTP_REFERER=http://127.0.0.1/spko/site/contact
+---
+2014/03/19 03:30:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/page?view=about
+HTTP_REFERER=http://127.0.0.1/spko/site/
+---
+2014/03/19 03:30:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/index
+HTTP_REFERER=http://127.0.0.1/spko/site/page?view=about
+---
+2014/03/19 03:30:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/page?view=about
+HTTP_REFERER=http://127.0.0.1/spko/site/index
+---
+2014/03/19 03:30:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/page?view=about
+HTTP_REFERER=http://127.0.0.1/spko/site/page?view=about
+---
+2014/03/19 03:30:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/page?view=about
+HTTP_REFERER=http://127.0.0.1/spko/site/page?view=about
+---
+2014/03/19 03:30:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/index
+HTTP_REFERER=http://127.0.0.1/spko/site/page?view=about
+---
+2014/03/19 03:30:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/index
+HTTP_REFERER=http://127.0.0.1/spko/site/index
+---
+2014/03/19 03:30:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/page?view=about
+HTTP_REFERER=http://127.0.0.1/spko/
+---
+2014/03/19 03:30:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/contact
+HTTP_REFERER=http://127.0.0.1/spko/site/page?view=about
+---
+2014/03/19 03:30:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\wamp\www\spko\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\spko\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\spko\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/spko/site/logout
+HTTP_REFERER=http://127.0.0.1/spko/site/contact
+---
+2014/03/19 04:41:59 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`spko`.`tbl_account`, CONSTRAINT `fk_tbl_account_tbl_user1` FOREIGN KEY (`username`) REFERENCES `tbl_user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `tbl_account` (`studNum`, `username`, `lastName`, `firstName`, `MiddleName`, `civilStat`, `gender`, `birthDate`, `permAdd`, `emailAdd`, `contactNum`, `gradYear`, `college`, `degree`, `major`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14).
+in C:\wamp\www\spko\protected\controllers\AccountController.php (73)
+in C:\wamp\www\spko\index.php (13)
+2014/03/19 04:41:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`spko`.`tbl_account`, CONSTRAINT `fk_tbl_account_tbl_user1` FOREIGN KEY (`username`) REFERENCES `tbl_user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `tbl_account` (`studNum`, `username`, `lastName`, `firstName`, `MiddleName`, `civilStat`, `gender`, `birthDate`, `permAdd`, `emailAdd`, `contactNum`, `gradYear`, `college`, `degree`, `major`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11, :yp12, :yp13, :yp14)' in C:\wamp\www\spko\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\wamp\www\spko\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\wamp\www\spko\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\spko\protected\controllers\AccountController.php(73): CActiveRecord->save()
+#3 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(49): AccountController->actionCreate()
+#4 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\spko\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\spko\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\spko\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\spko\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\spko\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\spko\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\spko\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController('account/create')
+#14 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\spko\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/spko/account/create
+HTTP_REFERER=http://127.0.0.1/spko/account/create
+---
+2014/03/20 04:41:34 [error] [php] include(Users.php): failed to open stream: No such file or directory (C:\wamp\www\spko\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\spko\protected\components\UserIdentity.php(20): spl_autoload_call()
+#1 C:\wamp\www\spko\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\wamp\www\spko\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#3 C:\wamp\www\spko\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#4 C:\wamp\www\spko\framework\base\CModel.php(159): CInlineValidator->validate()
+#5 C:\wamp\www\spko\protected\controllers\SiteController.php(94): LoginForm->validate()
+#6 C:\wamp\www\spko\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\wamp\www\spko\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\wamp\www\spko\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\wamp\www\spko\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\wamp\www\spko\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\wamp\www\spko\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\wamp\www\spko\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\wamp\www\spko\index.php(13): CWebApplication->run()
+REQUEST_URI=/spko/site/login
+in C:\wamp\www\spko\protected\components\UserIdentity.php (20)
+in C:\wamp\www\spko\protected\models\LoginForm.php (52)
+in C:\wamp\www\spko\protected\controllers\SiteController.php (94)

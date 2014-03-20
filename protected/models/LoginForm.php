@@ -9,7 +9,7 @@ class LoginForm extends CFormModel
 {
 	public $username;
 	public $password;
-	public $rememberMe;
+	public $rememberMe=false;
 
 	private $_identity;
 
@@ -58,7 +58,7 @@ class LoginForm extends CFormModel
 	 * Logs in the user using the given username and password in the model.
 	 * @return boolean whether login is successful
 	 */
-	public function login()
+	public function login ()
 	{
 		if($this->_identity===null)
 		{
