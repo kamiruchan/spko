@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	//array('label'=>'Create College', 'url'=>array('create')),
+	array('label'=>'Create College', 'url'=>array('create')),
 	array('label'=>'Manage College', 'url'=>array('admin')),
 );
 ?>

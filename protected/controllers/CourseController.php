@@ -60,9 +60,7 @@ class CourseController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	
-        /**
-         public function actionCreate()
+	public function actionCreate()
 	{
 		$model=new Course;
 
@@ -80,8 +78,6 @@ class CourseController extends Controller
 			'model'=>$model,
 		));
 	}
-         * 
-         */
 
 	/**
 	 * Updates a particular model.
